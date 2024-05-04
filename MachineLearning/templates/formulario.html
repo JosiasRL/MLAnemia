@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+
+{% block title %}datos{% endblock title %}
+
+
+
+{% block body %}
+
+<h1 style="font-size: 2.5rem; font-family: 'Arial', sans-serif; font-weight: bold; margin-bottom: 25px;"></h1>
+<h1 style="font-size: 2rem; font-family: 'Arial', sans-serif; font-weight: bold; margin-bottom: 25px; text-align: center;">Formulario para Modelo de Machine Learning</h1>
+    <div class="mx-auto max-w-7xl lg:max-w-8xl border border-gray-300 rounded-md p-6">
+
+    <form action="/realizar_prediccion/" method="post">
+     
+        {% csrf_token %}
+        
+         
+        <div class="grid grid-cols-3 gap-x-0 gap-y-2 justify-items-center">
+            <div class="flex items-center mb-2 minicaja" style="margin-right: 20px;">
+                <label for="sexo_femenino" class="block flex-grow">Sexo Femenino:</label>
+                <input type="number" id="sexo_femenino" name="FLAG_SEXO_FEMENINO" value="0" min="0" max="1" step="1" class="form-input border border-gray-300 rounded-md px-3 py-2 w-2/3 ml-2">
+
+            </div>
+
+            <div class="flex items-center mb-2 minicaja" style="margin-right: 20px;">
+                <label for="sexo_masculino" class="block flex-grow">Sexo Masculino:</label>
+                <input type="number" id="sexo_masculino" name="FLAG_SEXO_MASCULINO" value="0" min="0" max="1" step="1" class="form-input border border-gray-300 rounded-md px-3 py-2 w-2/3 ml-2">
+            </div>
+
+            <div class="flex items-center mb-2 minicaja" style="margin-right: 20px;">
+                <label for="tiene_seguro" class="block flex-grow">Tiene Seguro:</label>
+                <input type="number" id="tiene_seguro" name="FLAG_TIENE_SEGURO" value="0" min="0" max="1" step="1" class="form-input border border-gray-300 rounded-md px-3 py-2 w-2/3 ml-2">
+            </div>
+
+            <div class="flex items-center mb-2 minicaja" style="margin-right: 20px;">
+                <label for="sin_seguro" class="block flex-grow">Sin Seguro:</label>
+                <input type="number" id="sin_seguro" name="FLAG_SIN_SEGURO" value="0" min="0" max="1" step="1" class="form-input border border-gray-300 rounded-md px-3 py-2 w-2/3 ml-2">
+            </div>
+            
+            <div class="flex items-center mb-2 minicaja" style="margin-right: 20px;">
+                <label for="rinofaringitis_aguda" class="block flex-grow">Rinofaringitis Aguda (Rinitis):</label>
+                <input type="number" id="rinofaringitis_aguda" name="FLAG_RINOFARINGITIS_AGUDA_RINITIS" value="0" min="0" max="1" step="1" class="form-input border border-gray-300 rounded-md px-3 py-2 w-2/3 ml-2">
+            </div>
+
+            <div class="flex items-center mb-2 minicaja" style="margin-right: 20px;">
+                <label for="consulta_nutricional" class="block flex-grow">Consulta Nutricional Atención en Nutrición:</label>
+                <input type="number" id="consulta_nutricional" name="FLAG_CONSULTA_NUTRICIONAL_ATENCION_EN_NUTRICION" value="0" min="0" max="1" step="1" class="form-input border border-gray-300 rounded-md px-3 py-2 w-2/3 ml-2">
+            </div>
+
+            <div class="flex items-center mb-2 minicaja" style="margin-right: 20px;">
+                <label for="rinitis_alergica" class="block flex-grow">Rinitis Alérgica:</label>
+                <input type="number" id="rinitis_alergica" name="FLAG_RINITIS_ALERGICA" value="0" min="0" max="1" step="1" class="form-input border border-gray-300 rounded-md px-3 py-2 w-2/3 ml-2">
+            </div>
+
+            <div class="flex items-center mb-2 minicaja" style="margin-right: 20px;">
+                <label for="infeccion_vias_urinarias" class="block flex-grow">Infección Vías Urinarias Sitio No Especificado:</label>
+                <input type="number" id="infeccion_vias_urinarias" name="FLAG_INFECCION_VIAS_URINARIAS_SITIO_NO_ESPECIFICADO" value="0" min="0" max="1" step="1" class="form-input border border-gray-300 rounded-md px-3 py-2 w-2/3 ml-2">
+            </div>
+
+            <div class="flex items-center mb-2 minicaja" style="margin-right: 20px;">
+                <label for="pesquisa_enfermedades_sangre" class="block flex-grow">Pesquisa Enfermedades Sangre:</label>
+                <input type="number" id="pesquisa_enfermedades_sangre" name="FLAG_EXAMEN_PESQUISA_ENFERMEDADES_SANGRE"value="0" min="0" max="1" step="1" class="form-input border border-gray-300 rounded-md px-3 py-2 w-2/3 ml-2">
+            </div>
+
+            <div class="flex items-center mb-2 minicaja" style="margin-right: 20px;">
+                <label for="asma_no_especificada" class="block flex-grow">Asma No Especificada:</label>
+                <input type="number" id="asma_no_especificada" name="FLAG_ASMA_NO_ESPECIFICADA" value="0" min="0" max="1" step="1" class="form-input border border-gray-300 rounded-md px-3 py-2 w-2/3 ml-2">
+            </div>
+
+            <div class="flex items-center mb-2 minicaja" style="margin-right: 20px;">
+                <label for="purpura_trombocitopenica_idiopatica" class="block flex-grow">Púrpura Trombocitopénica Idiopática:</label>
+                <input type="number" id="purpura_trombocitopenica_idiopatica" name="FLAG_PURPURA_TROMBOCITOPENICA_IDIOPATICA" value="0" min="0" max="1" step="1" class="form-input border border-gray-300 rounded-md px-3 py-2 w-2/3 ml-2">
+            </div>
+
+            <div class="flex items-center mb-2 minicaja" style="margin-right: 20px;">
+                <label for="enfermedad_renal_etapa_5" class="block flex-grow">Enfermedad Renal Crónica Etapa 5:</label>
+                <input type="number" id="enfermedad_renal_etapa_5" name="FLAG_ENFERMEDAD_RENAL_CRONICA_ETAPA_5" value="0" min="0" max="1" step="1" class="form-input border border-gray-300 rounded-md px-3 py-2 w-2/3 ml-2">
+            </div>
+
+            <div class="flex items-center mb-2 minicaja" style="margin-right: 20px;">
+                <label for="enfermedad_renal_cronica" class="block flex-grow">Enfermedad Renal Crónica:</label>
+                <input type="number" id="enfermedad_renal_cronica" name="FLAG_ENFERMEDAD_RENAL_CRONICA" value="0" min="0" max="1" step="1" class="form-input border border-gray-300 rounded-md px-3 py-2 w-2/3 ml-2">
+            </div>
+
+            <div class="flex items-center mb-2 minicaja" style="margin-right: 20px;">
+                <label for="parasitosis_intestinal" class="block flex-grow">Parasitosis Intestinal:</label>
+                <input type="number" id="parasitosis_intestinal" name="FLAG_PARASITOSIS_INTESTINAL" value="0" min="0" max="1" step="1" class="form-input border border-gray-300 rounded-md px-3 py-2 w-2/3 ml-2">
+            </div>
+
+            <div class="flex items-center mb-2 minicaja" style="margin-right: 20px;">
+                <label for="pesquisa_trastornos_cardiovasculares" class="block flex-grow">Pesquisa Trastornos Cardiovasculares:</label>
+                <input type="number" id="pesquisa_trastornos_cardiovasculares" name="FLAG_EXAMEN_PESQUISA_TRASTORNOS_CARDIOVASCULARES" value="0" min="0" max="1" step="1" class="form-input border border-gray-300 rounded-md px-3 py-2 w-2/3 ml-2">
+            </div>
+
+            <div class="flex items-center mb-2 minicaja" style="margin-right: 20px;">
+                <label for="administracion_factor_viii_endovenoso" class="block flex-grow">Administración de Factor VIII Endovenoso:</label>
+                <input type="number" id="administracion_factor_viii_endovenoso" name="FLAG_ADMINISTRACION_DE_FACTOR_VIII_ENDOVENOSO" value="0" min="0" max="1" step="1" class="form-input border border-gray-300 rounded-md px-3 py-2 w-2/3 ml-2">
+            </div>
+
+            <div class="flex items-center mb-2 minicaja" style="margin-right: 20px;">
+                <label for="deficiencia_hereditaria_factor_viii" class="block flex-grow">Deficiencia Hereditaria del Factor VIII:</label>
+                <input type="number" id="deficiencia_hereditaria_factor_viii" name="FLAG_DEFICIENCIA_HEREDITARIA_DEL_FACTOR_VIII" value="0" min="0" max="1" step="1" class="form-input border border-gray-300 rounded-md px-3 py-2 w-2/3 ml-2">
+            </div>
+
+            <div class="flex items-center mb-2 minicaja" style="margin-right: 20px;">
+                <label for="neumonia_no_especificada" class="block flex-grow">Neumonía No Especificada:</label>
+                <input type="number" id="neumonia_no_especificada" name="FLAG_NEUMONIA_NO_ESPECIFICADA" value="0" min="0" max="1" step="1" class="form-input border border-gray-300 rounded-md px-3 py-2 w-2/3 ml-2">
+            </div>
+                <!-- Agrega más minicajas con estilos de margen aquí -->
+        </div>
+
+        <div class="text-center mt-4">
+            <input type="submit" value="Realizar Predicción" class="btn btn-warning">
+        </div>
+
+        <p></p>
+        <p></p>
+        <p></p>
+      
+    </form>
+
+    <h1 style="font-size: 2.5rem; font-family: 'Arial', sans-serif; font-weight: bold; margin-bottom: 25px;"></h1>
+    <h1 style="font-size: 2.5rem; font-family: 'Arial', sans-serif; font-weight: bold; margin-bottom: 25px;"></h1>
+</div>
+   
+
+
+{% endblock body %}
+
+
+
+
+
